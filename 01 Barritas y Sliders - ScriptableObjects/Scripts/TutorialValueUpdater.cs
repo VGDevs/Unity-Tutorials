@@ -61,5 +61,15 @@ namespace VGDevs.Examples
                 yield return new WaitForSecondsRealtime(m_currencyUpdateTimer);
             }
         }
+
+        private void OnDestroy()
+        {
+            StopCoroutine(UpdateCurrency());
+        }
+
+        public void SumRandomCurrency()
+        {
+            m_playerCurrency.Value += Random.Range(m_currencySumRange.x, m_currencySumRange.y);
+        }
     }
 }

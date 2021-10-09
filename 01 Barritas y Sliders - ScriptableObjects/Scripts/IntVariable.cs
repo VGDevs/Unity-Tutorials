@@ -3,14 +3,13 @@ namespace VGDevs.Examples
     using System;
     using UnityEngine;
     
-    [CreateAssetMenu(menuName = "VGDevs/FloatVariable")]
-    public class FloatVariable : ScriptableObject
+    public class IntVariable : ScriptableObject
     {
-        [SerializeField] private float m_value;
+        [SerializeField] private int m_value;
 
         public Action OnChange;
 
-        public float Value
+        public int Value
         {
             get => m_value;
             set

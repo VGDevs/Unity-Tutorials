@@ -14,7 +14,7 @@ namespace VGDevs.Examples
         
         private void UpdateVariable()
         {
-            string newText = m_textToReplace.Replace(kReplaceableString, m_variable.Value.ToString());
+            string newText = m_textToReplace.Replace(kReplaceableString, m_variable.Value.ToString("0"));
             m_tmpText.text = newText;
         }
         
